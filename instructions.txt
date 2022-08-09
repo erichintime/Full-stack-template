@@ -1,3 +1,5 @@
+--> 0. Create Server.js file
+
 //1. Initialize npm and install dependencies
 // express, dotenv, cors, mongodb, ejs, nodemon (--save-dev)
 
@@ -5,7 +7,9 @@
 
 //3. Declare variables
 
-//7. Create gitignore file and push to github
+//7. Create gitignore file to 
+--> remove node_modules and .env
+--> push to github
 
 //4. Connect to MongoDB - add connection string to .env file
 

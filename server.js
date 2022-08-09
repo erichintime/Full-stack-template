@@ -1,15 +1,20 @@
+//2. Require dependencies
 const express = require('express')
 const app = express()
 const cors = require('cors')
 const MongoClient = require('mongodb').MongoClient
 require('dotenv').config()
+
+//5.1 Create PORT
 const PORT = 8000
 
+//3. Declare variables
 let db,
     dbConnectionString = process.env.DB_STRING,
     dbName = 'sample_mflix',
     collection
 
+//4. Connect to DB (! - add connection string to .env)
 MongoClient.connect(dbConnectionString)
     .then(client => {
         console.log(`Connected to Database`)
@@ -31,7 +36,7 @@ app.get('/', async (request, response) => {
     }
 })
 
-
+//5.2 Create PORT
 //PORT = 8000
 app.listen(process.env.PORT || PORT, () => {
     console.log(`Server is running on port`)
